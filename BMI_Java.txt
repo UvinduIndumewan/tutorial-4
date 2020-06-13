@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class CaseStudy {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your weight in pounds:- ");
+        double wei = scan.nextInt();
+        System.out.print("Enter your height in inches:- ");
+        double hei = scan.nextInt();
+        wei = wei * 0.45359237;
+        hei = hei * 0.0254;
+        double bmi;
+        bmi = (wei / Math.pow(hei,2));
+        bmi = Math. round(bmi * 100.0) / 100.0;
+        System.out.println("BMI is " +bmi);
+        if (30.0 <= bmi){
+            System.out.println("Obese");
+        }
+        else if (25.0 <= bmi) {
+            System.out.println("Overweight");
+        }
+        else if (18.5 <= bmi) {
+            System.out.println("Normal");
+        }
+        else if (bmi < 18.5) {
+            System.out.println("Underweight");
+        }
+
+
+    }
+}
